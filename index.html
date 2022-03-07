@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <header class="navBar">
+            <a class="logo">
+                <img  alt="Logo" width="175px" src="images/logo_main.png"/>
+            </a>
+            <nav class="navLinkContainer">
+                <ul>
+                    <li>                
+                        <a class="navlink" href="#"> HOME </a>
+                    </li>
+                    <li>                
+                        <a class="navlink" href="#"> GAME </a>
+                    </li>
+                    <li>                
+                        <a class="navlink" href="#"> FAQ </a>
+                    </li>
+                    <li>                
+                        <a class="navlink" href="#"> CONTACT </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+
+            <section class="heroImg wrapper">
+                    <div class="heroContainer"> 
+                        <img class="hero-bg" width="2000px" src="/images/bg.png">
+                        <div class="hero-content">
+                            <img width="300px" src="/images/logo_main.png"/>
+                            <h1>Scratch <br/> to Win</h1>
+                            <button class="playBtn">Play Now</button>
+                        </div>
+                    </div>
+                    <div> <img src="/"> </div>
+                    <div> <img src="/"> </div>
+            </section>
+
+            <section class="info">
+                <fieldset class="cardContainer">
+                    <legend>
+                        How to Play The Game?
+                    </legend>
+                    <!-- <div class="dotLine"></div> -->
+                    <div class="card">
+                        <img src="/images/step_1.png" class="cardlogo">
+                        <p>Lorem ipsum dolor sit amet, 
+                            consectetur adipiscing elit. Duis auctor varius hendrerit. Aliquam eleifend, urna at varius dignissim, 
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <img src="/images/step_2.png" class="cardlogo">
+                        <p>Lorem ipsum dolor sit amet, 
+                            consectetur adipiscing elit. Duis auctor varius hendrerit. Aliquam eleifend, urna at varius dignissim, 
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <img src="/images/step_3.png" class="cardlogo">
+                        <p>Lorem ipsum dolor sit amet, 
+                            consectetur adipiscing elit. Duis auctor varius hendrerit. Aliquam eleifend, urna at varius dignissim, 
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <img src="/images/step_4.png" class="cardlogo">
+                        <p>Lorem ipsum dolor sit amet, 
+                            consectetur adipiscing elit. Duis auctor varius hendrerit. Aliquam eleifend, urna at varius dignissim, 
+                        </p>
+                    </div>
+                    <div class="infoBtn">
+                        <button class="playBtn"> Play Now </button>
+                    </div>
+                </fieldset>
+            </section>
+
+            <section class="sponsor">
+                <div class="verticalTab">
+                    <h3>OUR SPONSOR</h3>
+                </div>
+                <div class="sponsorSection">
+                    <img  src="/images/Fresh Kicks-o-matic Dispenso Booths.png"/>
+                    <img src="/images/Glorbotronic Burgers.png"/>
+                    <img src="/images/Raw-Cabbage-on-a-stick Hut.png"/>
+                    <img src="/images/taco_superstore.png"/>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <section class="footerContainer">
+                <a class="logo">
+                    <img  alt="Logo" width="150px" src="images/buyMoreDollars_dark_logo.png"/>
+                </a>
+                <p>CopyRight 2021 All Rights Reserved by BuyMore Dollars</p>
+                <a>Terms & Conditions</a>
+                <a>Privacy Policy</a>
+            </section>
+            <section class="socialIcon">
+                <p>Stay Connected : </p>
+                <a href=""><img width="35px" src="/images/FB_icon.png" alt=""></a>
+                <a href=""><img width="35px" src="/images/twittter_icon.png" alt=""></a>
+                <a href=""><img width="35px" src="/images/instagram_icon.png" alt=""></a>
+                <a href=""><img width="35px" src="/images/youtube_icon.png" alt=""></a>
+            </section>
+        </footer>
+        
+        <!-- <script src=""></script> -->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script type="text/javascript" src="js/slick.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('.heroImg').slick( {
+                    dots: true,
+                    arrows: false,
+                    autoplay: true,
+                    infinite: true,
+                    autoplaySpeed: 5000,
+                })
+            })
+            $(document).ready(function() {
+                $('.sponsorSection').slick( {
+                    dots: true,
+                    autoplay: true,
+                    infinite: true,
+                    autoplaySpeed: 5000,
+                    slidesToShow: 1,
+                    variableWidth: true,
+                    lazyLoad: 'ondemand',
+                })
+            })
+        </script>
+    </body>
+</html>
