@@ -1,0 +1,24 @@
+.game-container {
+    height: 100vh;
+    background-image: url(../images/form_background.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-content: center;
+    padding-left: 150px;
+}
+
+.prize-details {
+    height: 500px;
+    width:  auto;
+    display: block;
+}
+
+.prize-container {
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+    align-items: flex-end;
+}
+
