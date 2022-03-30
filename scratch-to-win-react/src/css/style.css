@@ -1,0 +1,281 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+body {
+    background-color: black;
+    color: white;
+}
+
+/* Header Styles */
+.navBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    padding-left: 100px;
+    position: absolute;
+    top: 0;
+    z-index: 10000;
+    width: 100%;
+    font-weight: 400;
+}
+
+.logo:hover{
+    cursor: pointer;
+}
+
+.navLinkContainer {
+    width: 50%;
+    position: relative;
+    padding: 15px;
+    /* filter: drop-shadow(5px 6px 3px rgba(50, 50, 0, 1)); */
+}
+
+.navLinkContainer:before {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: gold;
+    --p: polygon(0 0, 100% 0%, 100% 100%, 5% 100%);
+    -webkit-clip-path: var(--p);
+    clip-path: var(--p);
+    content: "";
+}
+
+.navlink{
+    text-decoration: none;
+}
+.navLinkContainer ul{
+    float: right;
+    width: 80%;
+    /* background-color: aliceblue; */
+    display: flex;
+    justify-content: space-evenly;
+}
+.navLinkContainer li {
+    list-style: none;
+    
+}
+
+.navLinkContainer li a{
+    color: black;
+    font-size: 1.3rem;
+}
+.navLinkContainer li a:hover{
+    /* color: white; */
+    font-weight: 600;
+}
+
+/* Hero Image */
+
+.heroImg{
+    /* height: 80vh; */
+    width: 100%;
+    background-color: grey;
+    overflow: hidden;
+}
+
+.heroContainer {
+    position: relative;
+}
+
+.heroImg .hero-bg {
+    width: 100%;
+    height: auto;
+    border-bottom: 5px solid gold;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    left: 15%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+}
+
+
+
+/* Main Content Style */
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+fieldset {
+    width: 80%;
+    padding: 25px;
+    padding-bottom: 150px;
+}
+
+legend {
+    text-align: center;
+    font-size: 4rem;
+    padding: 10px;
+    text-transform: uppercase;
+    color: gold;
+}
+
+.info h1 {
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+}
+
+.card {
+    text-align: center;
+}
+
+.card img {
+    margin-bottom: 25px;
+}
+
+.card p {
+    width: 200px;
+    /* text-align: left; */
+    font-size: 1.1rem;
+    line-height: 150%;
+}
+
+.cardContainer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+/* Sponsor Section */
+
+.sponsor {
+    position: relative;
+    width: 80%;
+    margin: 100px auto;
+}
+
+.sponsorSection{
+    overflow: hidden;
+    margin-left: 90px;
+    display: flex;
+}
+
+.sponsorSection .slick-next {
+    position: relative;
+    margin: 140px 10px;
+    right: 0;
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0)
+}
+
+.sponsorSection .slick-prev:before, .sponsorSection .slick-next:before {
+    font-size: 60px;
+    color: transparent;
+    background-image: url("../images/next_arrow_icon.png");
+    background-repeat: no-repeat;
+}
+
+.sponsorImg {
+    height: 350px;
+    width: 350px;
+    margin: 0 10px;
+}
+
+.verticalTab {
+    background-color: gold;
+    color: black;
+    font-size: 1.5rem;
+    width: 350px;
+    padding: 20px;
+    text-align: center;
+    font-weight: 600;
+
+    position: absolute;
+    left: 0;
+    bottom: -72px;
+    z-index: 10000;
+
+    transform: rotate(270deg);
+    text-transform: uppercase;
+    transform-origin: top left;
+}
+
+/* button styles */
+
+.playBtn {
+    padding: 15px 50px;
+    background-color: transparent;
+    color: white;
+    font-size: 2rem;
+    text-transform: uppercase;
+    outline: none;
+    border: 1px solid gold;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+.playBtn:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+.infoBtn {
+    position: absolute;
+    bottom: -60px;
+    margin: 0 auto;
+    width: 350px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Footer Style */
+
+footer{
+    margin: 0 auto;
+}
+
+.footerContainer {
+    margin: auto;
+    width: 80%;
+    background-color: gold;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.footerContainer a:hover{
+    color: black;
+    cursor: pointer;
+}
+
+.socialIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+}
+
+.socialIcon > *{
+    margin-right: 15px;
+}
