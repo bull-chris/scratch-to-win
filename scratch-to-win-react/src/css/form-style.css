@@ -1,0 +1,191 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#form{
+    display: flex;
+    align-items: center;
+}
+
+.formWrapper{
+    position: relative;
+    width: 500px;
+    height: 800px;
+    padding: 15px;
+    background-color: white;
+    box-shadow:
+    0 0 0 10px hsl(0, 0%, 100%),
+    0 0 0 11px gold;
+}
+
+legend {
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}   
+
+/* Input Stlyes */
+
+.formContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0px 15px 30px 15px;
+
+}
+
+input.formInput {
+    padding: 10px;
+    margin: 7px 0;
+}
+
+/* Date Styles */
+
+#bday{
+    position: relative;
+}
+
+.optionContainer{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+select{
+    padding: 10px;
+    color: rgb(87, 87, 87);
+}
+
+/* Check Box Stlyes */
+
+.checkboxSection{
+    margin-top: 10px;
+}
+
+.checkContainer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    /* margin-top: 20px; */
+}
+.checkContainer div {
+    width: 90%;
+}
+
+input[type='checkbox']{
+    width:20px;
+    height:20px;
+    margin-right: 10px;
+    
+}
+
+label {
+    font-size: 0.7rem;
+    color: rgb(87, 87, 87);
+}
+
+.labelContainer {
+    /* padding: 15px; */
+    padding-left: 10px;
+    padding-bottom: 5px;
+    /* color: rgb(87, 87, 87); */
+}
+
+/* Submit Button */
+
+.btnLegend {
+    position: absolute;
+    bottom: -25px;
+    /* border: 1px solid red; */
+    width:55%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    /* background-color: white; */
+    /* left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%) */
+}
+
+input[type='submit']{
+    width: 80%;
+    background-color: gold;
+    border: transparent;
+    font-size: 20pt;
+    font-weight: 700;
+    padding: 10px 10px;
+}
+
+/* Invalid Styles */
+
+.error {
+    border: 1px solid red;
+}
+
+.invalidInput {
+    font-size: .7rem;
+    padding-left: 15px;
+    color: red;
+}
+
+.errorAlert {
+    position: absolute;
+    border: 1px solid grey;
+    border-left: 10px solid grey;
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    font-size: .7rem;
+    width: 100%;
+    right: -350px;
+    bottom: 5px;
+}
+
+.errorAlert#errorBox2{
+    bottom: 60px;
+    right: -345px;
+}
+
+
+.errorAlert img {
+    margin-right: 10px;
+}
+
+/* etc */
+
+span{
+    font-weight: 700;
+}
+
+input:focus,select:focus {
+    outline: none;
+}
+
+.submitDisplay {
+
+    border: 1px solid grey;
+    border-left: 10px solid grey;
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+    width: 70%; 
+    margin: 50px auto;
+
+}
+
+.submitDisplay img {
+    margin-right: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
