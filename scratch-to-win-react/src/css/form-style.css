@@ -18,7 +18,7 @@
     background-color: white;
     box-shadow:
     0 0 0 10px hsl(0, 0%, 100%),
-    0 0 0 11px gold;
+    0 0 0 11px #E99F22;
 }
 
 legend {
@@ -114,7 +114,7 @@ label {
 
 input[type='submit']{
     width: 80%;
-    background-color: gold;
+    background-color: #E99F22;
     border: transparent;
     font-size: 20pt;
     font-weight: 700;
