@@ -6,7 +6,7 @@ class Footer extends React.Component {
             <footer>
                 <section className="footerContainer">
                     <a className="logo">
-                        <img  alt="Logo" width="150px" src={require("../images/buyMoreDollars_dark_logo.png")}/>
+                        <img  alt="Logo" width="150px" src={require("../images/buyMoreDollars_black_logo.png")}/>
                     </a>
                     <p>Copyright 2022 All Rights Reserved by BuyMore Dollars</p>
                     <a>Terms & Conditions</a>
