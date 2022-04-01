@@ -12,8 +12,6 @@
 
 .formWrapper{
     position: relative;
-    width: 500px;
-    height: 800px;
     padding: 15px;
     background-color: white;
     box-shadow:
@@ -25,6 +23,10 @@ legend {
     width: auto;
     margin-left: auto;
     margin-right: auto;
+}   
+
+legend img{
+    width:90%;
 }   
 
 /* Input Stlyes */
