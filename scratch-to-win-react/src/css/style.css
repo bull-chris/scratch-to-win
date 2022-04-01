@@ -12,6 +12,18 @@ body {
 }
 
 /* Header Styles */
+
+.navBar {
+    margin: auto;
+    width: 90%;
+    background-color: black;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+}
+/*
 .navBar {
     display: flex;
     align-items: center;
@@ -23,7 +35,8 @@ body {
     z-index: 10000;
     width: 100%;
     font-weight: 400;
-}
+    background-color: black;
+}*/
 
 .logo:hover{
     cursor: pointer;
@@ -33,6 +46,11 @@ body {
     width: 50%;
     position: relative;
     padding: 15px;
+    background: #E99F22;
+    --p: polygon(0 0, 100% 0%, 100% 100%, 5% 100%);
+    -webkit-clip-path: var(--p);
+    clip-path: var(--p);
+    content: "";
     /* filter: drop-shadow(5px 6px 3px rgba(50, 50, 0, 1)); */
 }
 
@@ -43,7 +61,7 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
-    background: gold;
+    background: #E99F22;
     --p: polygon(0 0, 100% 0%, 100% 100%, 5% 100%);
     -webkit-clip-path: var(--p);
     clip-path: var(--p);
@@ -90,7 +108,7 @@ body {
 .heroImg .hero-bg {
     width: 100%;
     height: auto;
-    border-bottom: 5px solid gold;
+    border-bottom: 5px solid #E99F22;
 }
 
 .hero-content {
@@ -129,7 +147,7 @@ legend {
     font-size: 4rem;
     padding: 10px;
     text-transform: uppercase;
-    color: gold;
+    color: #E99F22;
 }
 
 .info h1 {
@@ -197,7 +215,7 @@ legend {
 }
 
 .verticalTab {
-    background-color: gold;
+    background-color: #E99F22;
     color: black;
     font-size: 1.5rem;
     width: 350px;
@@ -224,7 +242,7 @@ legend {
     font-size: 2rem;
     text-transform: uppercase;
     outline: none;
-    border: 1px solid gold;
+    border: 1px solid #E99F22;
     margin-bottom: 25px;
     margin-top: 25px;
 }
@@ -255,13 +273,14 @@ footer{
 
 .footerContainer {
     margin: auto;
-    width: 80%;
-    background-color: gold;
+    width: 90%;
+    background-color: #E99F22;
     color: black;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 15px;
+    margin-top: 2rem;
 }
 
 .footerContainer a:hover{
