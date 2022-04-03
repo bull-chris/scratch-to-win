@@ -4,9 +4,8 @@
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
-    display: flex;
-    align-content: center;
     padding-left: 150px;
+    padding-right: 150px;
 }
 
 .prize-details {
@@ -21,4 +20,83 @@
     align-content: center;
     align-items: flex-end;
 }
+
+.instruction-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 90%;
+}
+
+.instruction-main {
+    background-image: url(../images/instruction_bg_with_logo.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100%;
+    width: 500px;
+    position: relative;
+}
+
+.instruction-main h3{
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    color: black;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.instruction-main p{
+    position: absolute;
+    top: 250px;
+    left: 25%;
+    color: black;
+    text-align: left;
+}
+
+.instruction-footer {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.instruction-footer button {
+    padding: 10px 30px;
+    font-size: 1.2rem;
+    color: black;
+    background-color: #E99F22;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.instruction-footer .game-counter {
+    display: flex;  
+    padding: 10px 50px;
+    font-size: 1.2rem;
+    color: black;
+    background-color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.instruction-footer p {
+    margin: 0 5px;
+}
+
+.game-board {
+    width: 50%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.board-row {
+    display: flex;
+    justify-content: space-between;
+}
+
 
