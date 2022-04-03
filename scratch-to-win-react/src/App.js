@@ -9,6 +9,7 @@ import Header from './components/header.js';
 import Footer from './components/footer.js';
 import ScratchHome from './components/scratch-home.js';
 import ScratchForm from './components/scratch-form';
+import ScratchGame from './components/scratch-game';
 
 function App() {
   return (
@@ -17,7 +18,8 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<ScratchHome />} />
-        <Route path="/form" element={<ScratchForm />} />
+        {/* <Route path="/form" element={<ScratchForm />} /> */}
+        <Route path="/form" element={<ScratchGame />} />
         {/* <Route path="/legal" element={<ScratchLegal />} /> */}
       </Routes>
       
