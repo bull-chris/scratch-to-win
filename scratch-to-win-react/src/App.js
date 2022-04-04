@@ -18,8 +18,8 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<ScratchHome />} />
-        {/* <Route path="/form" element={<ScratchForm />} /> */}
-        <Route path="/form" element={<ScratchGame />} />
+        <Route path="/form" element={<ScratchForm />} />
+        {/* <Route path="/form" element={<ScratchGame />} /> */}
         {/* <Route path="/legal" element={<ScratchLegal />} /> */}
       </Routes>
       
