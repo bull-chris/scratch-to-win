@@ -21,6 +21,7 @@ class Form extends Component {
         this.isLeapYear = this.isLeapYear.bind(this);
         this.change_month = this.change_month.bind(this);
         this.checkDropDown = this.checkDropDown.bind(this);
+        let success = false;
     }
 
     isLeapYear(year) {
@@ -135,24 +136,26 @@ class Form extends Component {
         
     }
 
-    checkDropDown(){
+    checkDropDown(e){
         let dropDown = document.getElementsByClassName('dropdownBday');
         let err = document.getElementsByClassName('invalidInput')
         for(let i = 0; i < dropDown.length; i++){
             if(!dropDown[i].validity.valid){
+                e.preventDefault();
                 dropDown[i].classList.add('error');
                 err[5].classList.remove('hidden')
             } else {
                 dropDown[i].classList.remove('error');
-                err[5].classList.remove('hidden')
+                err[5].classList.add('hidden')
             }
         }
     }
 
-    checkBoxValidate(){
+    checkBoxValidate(e){
         let checkBox = document.getElementById('rules');
         let errorBoxes = document.getElementsByClassName('errorAlert');
         if(!checkBox.validity.valid){
+            e.preventDefault();
             errorBoxes[1].classList.remove('hidden')
         } else {
             errorBoxes[1].classList.add('hidden')
@@ -175,15 +178,18 @@ class Form extends Component {
     handleSubmit(e){
         let validationElements = document.getElementsByClassName('formInput');
 
-        e.preventDefault();
-        this.checkDropDown();
-        this.checkBoxValidate()
+        this.checkDropDown(e);
+        this.checkBoxValidate(e);
         for(let i = 0; i < validationElements.length; i++){
             console.log(validationElements[i].target)
             if (!validationElements[i].validity.valid) {
-                this.showError(validationElements[i], i)
+                e.preventDefault();
+                this.showError(validationElements[i], i);
             }  
         }
+            
+
+        
     }
 
     render() {
@@ -279,7 +285,7 @@ class Form extends Component {
                             </div>
                         </div>
                         <div className="btnLegend">
-                            <input type="submit" defaultValue="SUBMIT" onClick={(e) => this.handleSubmit(e)}></input>
+                            <Link to="/game"><input type="submit" defaultValue="SUBMIT" onClick={(e) => this.handleSubmit(e)}></input></Link>
                         </div>
                     </fieldset>
                 </form>
