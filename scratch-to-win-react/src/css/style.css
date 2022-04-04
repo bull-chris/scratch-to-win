@@ -148,6 +148,7 @@ legend {
     padding: 10px;
     text-transform: uppercase;
     color: #E99F22;
+    font-weight: bolder;
 }
 
 .info h1 {
@@ -157,6 +158,7 @@ legend {
 
 .card {
     text-align: center;
+    height:20rem;
 }
 
 .card img {
