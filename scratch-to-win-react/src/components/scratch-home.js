@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 import Slider from 'react-slick';
 
@@ -31,7 +32,7 @@ class ScratchHome extends React.Component {
                         <div className="hero-content">
                             <img width="300px" src={require("../images/logo_main.png")}/>
                             <img width="600px" src={require("../images/scratch_logo.png")}/>
-                            <button className="playBtn">Play Now</button>
+                            <Link to="/form"><button className="playBtn">Play Now</button></Link>
                         </div>
                     </div>
                     {/* <div> <img src="/"/> </div>
@@ -68,7 +69,7 @@ class ScratchHome extends React.Component {
                             </p>
                         </div>
                         <div className="infoBtn">
-                            <button className="playBtn"> Play Now </button>
+                            <Link to="/form"><button className="playBtn"> Play Now </button></Link>
                         </div>
                     </fieldset>
                 </section>
