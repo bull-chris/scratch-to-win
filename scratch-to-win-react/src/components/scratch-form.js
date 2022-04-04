@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import Form from "./form";
 import '../css/game-stlye.css';
+
 import prizeDetail from '../images/prize_detail.png'
 
 class ScratchForm extends Component {

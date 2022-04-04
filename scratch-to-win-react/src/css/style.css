@@ -298,3 +298,152 @@ footer{
 .socialIcon > *{
     margin-right: 15px;
 }
+
+/** responsive styling settings */
+@media screen and (max-width: 640px) {
+    
+    /* mobile header styles */
+    .navBar {
+        display: block;
+        text-align: center;
+        width: 100%;
+        padding: 15px 0px;
+    }
+
+    .navLinkContainer {
+        width: 100%;
+        --p: none;
+        margin-top: 1rem;
+    }
+
+    .navLinkContainer ul {
+        float: none;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    /* home page styles */
+    .hero-content {
+        width: 100%;
+        top: 0;
+        left: 0;
+        bottom: 0;
+    }
+
+    .hero-content img {
+        width: 30%;
+    }
+
+    .hero-content button {
+        width: 75%;
+    }
+
+    .playBtn {
+        padding: 0px;
+    }
+
+    legend {
+        font-size: 2rem;
+    }
+
+    .cardContainer {
+        display: block;
+    }
+
+    .card {
+        margin-bottom: 1rem;
+    }
+
+    .card p {
+        width: auto;
+    }
+
+     /* form page styling */
+    .form-container {
+        display: block;
+    }
+
+    /* mobile footer styles */
+
+    .footerContainer {
+        display: block;
+        text-align: center;
+    }
+
+    .footerContainer p, .footerContainer a {
+        padding: 5px 0px;
+    }
+}
+
+/* tablet styles */
+@media screen and (min-width: 640px) and (max-width: 1024px) {
+    
+    /* mobile header styles */
+    .navBar {
+        display: block;
+        text-align: center;
+        width: 100%;
+        padding: 15px 0px;
+    }
+
+    .navLinkContainer {
+        width: 100%;
+        --p: none;
+        margin-top: 1rem;
+    }
+
+    .navLinkContainer ul {
+        float: none;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    /* home page styles */
+    .hero-content {
+        width: 100%;
+        top: 0;
+        left: 0;
+        bottom: 0;
+    }
+
+    .hero-content img {
+        width: 30%;
+    }
+
+    .hero-content button {
+        width: 75%;
+    }
+
+    .infoBtn {
+        width: 92%;
+    }
+
+    legend {
+        font-size: 2rem;
+    }
+
+    .cardContainer {
+        display: block;
+    }
+
+    .card {
+        margin-bottom: 1rem;
+    }
+
+    .card p {
+        width: auto;
+    }
+
+    /* mobile footer styles */
+
+    .footerContainer {
+        display: block;
+        text-align: center;
+    }
+
+    .footerContainer p, .footerContainer a {
+        padding: 5px 0px;
+    }
+}

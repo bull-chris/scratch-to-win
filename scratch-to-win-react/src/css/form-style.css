@@ -193,3 +193,16 @@ input:focus,select:focus {
     display: none;
 }
 
+/** responsive styling settings */
+@media screen and (max-width: 340px) {
+    
+    /* form settings */
+    .optionContainer {
+        display: block;
+    }
+
+    .optionContainer select {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}

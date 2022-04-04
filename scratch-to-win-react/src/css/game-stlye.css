@@ -105,4 +105,148 @@
     justify-content: space-between;
 }
 
+/** responsive styling settings */
+@media screen and (max-width: 640px) {
+    
+    /* form page settings */
+    .form-container {
+        display: block;
+    }
+
+    .form-container fieldset {
+        width: 100%;
+    }
+
+    .game-container {
+        height: auto;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .btnLegend {
+        width: 100%;
+    }
+
+    .prize-details {
+        display: block;
+        height: auto;
+        width: 100%;
+        margin-top: 3rem;
+    }
+
+    /* game page styling */
+    .instruction-container {
+        display: block;
+    }
+
+    .instruction-main {
+        background-image: url(http://localhost:3000/static/media/instruction_bg_with_logo.7d61ef7a5f7e8b1e4e89.png);
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 100%;
+        position: relative;
+        height: 600px;
+    }
+
+    .instruction-main h3 {
+        top: 125px;
+    }
+
+    .instruction-footer {
+        display: block;
+        margin-top: 2rem;
+    }
+
+    .instruction-footer .game-counter {
+        display: block;
+    }
+
+    .instruction-footer button {
+        width: 100%;
+        margin: 1rem 0rem;
+    }
+
+    .game-board {
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    .board-row img {
+        width: 75px;
+    }
+}
+
+/* tablet styles */
+@media screen and (min-width: 640px) and (max-width: 1024px) {
+    
+    /* form page settings */
+    .form-container {
+        display: block;
+    }
+
+    .form-container fieldset {
+        width: 100%;
+    }
+
+    .game-container {
+        height: auto;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .btnLegend {
+        width: 100%;
+    }
+
+    .prize-details {
+        display: block;
+        height: auto;
+        width: 100%;
+        margin-top: 3rem;
+    }
+
+    /* game page styling */
+    .instruction-container {
+        display: flex;
+    }
+
+    .instruction-main {
+        background-image: url(http://localhost:3000/static/media/instruction_bg_with_logo.7d61ef7a5f7e8b1e4e89.png);
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 100%;
+        position: relative;
+        height: 500px;
+    }
+
+    .instruction-main h3 {
+        top: 125px;
+    }
+
+    .instruction-footer {
+        display: block;
+        margin-top: 2rem;
+    }
+
+    .instruction-footer .game-counter {
+        display: block;
+    }
+
+    .instruction-footer button {
+        width: 100%;
+        margin: 1rem 0rem;
+    }
+
+    .game-board {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .board-row img {
+        width: 95px;
+    }
+}
+
 
