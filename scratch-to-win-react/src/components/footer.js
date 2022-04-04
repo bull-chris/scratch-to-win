@@ -1,13 +1,14 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 class Footer extends React.Component {
     render() {
         return (
             <footer>
                 <section className="footerContainer">
-                    <a className="logo">
+                    <Link to="/" className="logo">
                         <img  alt="Logo" width="150px" src={require("../images/buyMoreDollars_black_logo.png")}/>
-                    </a>
+                    </Link>
                     <p>Copyright 2022 All Rights Reserved by BuyMore Dollars</p>
                     <p>Terms & Conditions</p>
                     <p>Privacy Policy</p>
