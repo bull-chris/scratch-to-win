@@ -245,10 +245,11 @@ legend {
     border: 1px solid #E99F22;
     margin-bottom: 25px;
     margin-top: 25px;
+    font-weight: bolder;
 }
 
 .playBtn:hover {
-    background-color: white;
+    background-color: #E99F22;
     color: black;
     cursor: pointer;
     border: 1px solid black;
