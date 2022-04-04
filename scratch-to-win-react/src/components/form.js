@@ -19,6 +19,7 @@ class Form extends Component {
         this.change_year = this.change_year.bind(this);
         this.isLeapYear = this.isLeapYear.bind(this);
         this.change_month = this.change_month.bind(this);
+        this.checkDropDown = this.checkDropDown.bind(this);
     }
 
     isLeapYear(year) {
@@ -71,20 +72,132 @@ class Form extends Component {
         }
     }
 
+    showError(ele, index){
+        let msg ,msg2;
+        let err = document.getElementsByClassName('invalidInput')
+        if(ele.validity.valid){
+            err[index].classList.add('hidden');
+            ele.classList.remove('error');
+        }
+        switch(ele.name) {
+            case "phone":
+                msg = "The Phone number format is not recognized"
+                msg2 = "Please Enter Your Phone Number"
+                if (ele.validity.valueMissing){
+                    err[index].innerHTML = msg2
+                    err[index].classList.remove('hidden');
+                    ele.classList.add('error');
+                    break;
+                } else if(ele.validity.patternMismatch) {
+                    err[index].innerHTML = msg
+                    err[index].classList.remove('hidden');
+                    ele.classList.add('error');
+                    break;
+                } else if(ele.validity.tooShort) {
+                    err[index].innerHTML = msg
+                    err[index].classList.remove('hidden');
+                    ele.classList.add('error');
+                    break;
+                }
+                break;
+            case "email":
+                msg = "Invalid email! Please Enter a valid email"
+                msg2 = "Please Enter Your Email"
+                if (ele.validity.valueMissing){
+                    err[index].innerHTML = msg2
+                    err[index].classList.remove('hidden');
+                    ele.target.classList.add('error');
+                    break;
+                } else if(ele.validity.typeMismatch) {
+                    err[index].innerHTML = msg
+                    err[index].classList.remove('hidden');
+                    ele.classList.add('error');
+                    break;
+                }  else if (ele.validity.tooShort) {
+                    err[index].classList.remove('hidden');
+                    ele.classList.add('error');
+                    break;
+                }
+                break;
+                default: {
+                    if (ele.validity.valueMissing){
+                        err[index].classList.remove('hidden');
+                        ele.classList.add('error');
+                        break;
+                    }else if(ele.validity.patternMismatch) {
+                        err[index].classList.remove('hidden');
+                        ele.classList.add('error');
+                        break;
+                    }
+                }
+        }
+        
+    }
+
+    checkDropDown(){
+        let dropDown = document.getElementsByClassName('dropdownBday');
+        let err = document.getElementsByClassName('invalidInput')
+        for(let i = 0; i < dropDown.length; i++){
+            if(!dropDown[i].validity.valid){
+                dropDown[i].classList.add('error');
+                err[5].classList.remove('hidden')
+            } else {
+                dropDown[i].classList.remove('error');
+                err[5].classList.remove('hidden')
+            }
+        }
+    }
+
+    checkBoxValidate(){
+        let checkBox = document.getElementById('rules');
+        let errorBoxes = document.getElementsByClassName('errorAlert');
+        if(!checkBox.validity.valid){
+            errorBoxes[1].classList.remove('hidden')
+        } else {
+            errorBoxes[1].classList.add('hidden')
+        }
+    }
+
+    checkAge(select){
+        let err = document.getElementsByClassName('invalidInput')
+        let age = this.state.currentYear - select.target.value;
+        if(age < 16){
+            err[5].innerHTML = "Must be 16 years of age to play"
+            err[5].classList.remove('hidden')
+        } else {
+            err[5].innerHTML = "Please Select your Date of Birth"
+            err[5].classList.add('hidden')
+        }
+        console.log(age)
+    }
+
+    handleSubmit(e){
+        let validationElements = document.getElementsByClassName('formInput');
+
+        e.preventDefault();
+        this.checkDropDown();
+        this.checkBoxValidate()
+        for(let i = 0; i < validationElements.length; i++){
+            console.log(validationElements[i].target)
+            if (!validationElements[i].validity.valid) {
+                this.showError(validationElements[i], i)
+            }  
+        }
+    }
+
     render() {
         const dayItems = [];
         const monthItems = [];
         const yearItems = [];
 
+        // Populate Day Options
         for(let i = 1; i <= this.state.Days[0]; i++) {
             dayItems.push(<option key={i} defaultValue={i}>{i}</option>)
-            // dayOptions.append(option)
         }
 
-        // Populate Mopnth options
+        // Populate Month options
         for(let i = 1; i <= 12; i++) {
             monthItems.push(<option key={this.state.Months[i]} defaultValue={i}> {this.state.Months[i]} </option>)
-            // monthOptions.append(option)
         }
 
         // Populate Year options    
@@ -93,33 +206,31 @@ class Form extends Component {
             option.text = i;
             option.value = i;
             yearItems.push(<option key={i} defaultValue={i}> {i} </option>)
-            // yearOptions.append(option)
         }
-
+        
         return (
-                <form name="myForm" id="form">
+                <form name="myForm" id="form" >
                     <fieldset className="formWrapper">
 
                         <legend >
-                            <img src={darkLogo} />
+                            <img src={darkLogo} alt='logo'/>
                         </legend>
 
                         <div className="formContent">
-                            <input className="formInput" type="text" autoComplete="given-name" id="fName" name="fName" placeholder="First Name" pattern="^(?! )[A-Za-z\s]*$" required />
+                            <input onChange={ (e) => this.showError( e.target ,0 )}   className="formInput" type="text" autoComplete="given-name" id="fName" name="fName" placeholder="First Name" pattern="^(?! )[A-Za-z\s]*$" required />
                             <div className="invalidInput hidden"><p>Please Enter Your First Name </p></div>
 
-                            <input className="formInput" type="text" autoComplete="family-name" id="lName" name="lName" placeholder="Last Name" pattern="^(?! )[A-Za-z\s]*$" required />
+                            <input onChange={(e) => this.showError( e.target , 1 )}  className="formInput" type="text" autoComplete="family-name" id="lName" name="lName" placeholder="Last Name" pattern="^(?! )[A-Za-z\s]*$" required />
                             <div className="invalidInput hidden"><p>Please Enter Your Last Name </p></div>
 
-                            <input className="formInput" type="text" autoComplete="street-address" id="address" name="address" placeholder="Address" required />
+                            <input onChange={(e) => this.showError( e.target , 2 )} className="formInput" type="text" autoComplete="street-address" id="address" name="address" placeholder="Address" required />
                             <div className="invalidInput hidden"><p>Please Enter Your Full Address </p></div>
 
-                            <input className="formInput" type="tel" autoComplete="tel" id="phone" name="phone" placeholder="Phone Number" maxLength="10" minLength="10" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required/>
+                            <input onChange={(e) => this.showError( e.target , 3 )} className="formInput" type="tel" autoComplete="tel" id="phone" name="phone" placeholder="Phone Number" maxLength="10" minLength="10" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required/>
                             <div className="invalidInput hidden"><p>Please Enter Your Phone Number </p></div>
 
-                            <input className="formInput" type="email" autoComplete="email" id="email" name="email" placeholder="Email" required/>
+                            <input onChange={(e) => this.showError( e.target , 4 )} className="formInput" type="email" autoComplete="email" id="email" name="email" placeholder="Email" required/>
                             <div className="invalidInput hidden" ><p>Please Enter Your Email </p></div>
-
 
                             <div id="bday">
                                 <div className="labelContainer">
@@ -127,7 +238,7 @@ class Form extends Component {
                                 </div>
 
                                 <div className="errorAlert hidden" id="errorBox">
-                                    <img src="img/alert_icon.png" width="35px" />
+                                    <img src="img/alert_icon.png" width="35px" alt="alert"/>
                                     <p>Please Select your Date of Birth</p>
                                 </div>
 
@@ -140,7 +251,7 @@ class Form extends Component {
                                         <option defaultValue="Month" disabled >Month</option>
                                         {monthItems}
                                     </select>
-                                    <select onChange={this.change_year} className="dropdownBday" id="year" name="yyyy" required>
+                                    <select onChange={(e) => {this.change_year(e); this.checkAge(e); }} className="dropdownBday" id="year" name="yyyy" required>
                                         <option defaultValue="Year" disabled >Year</option>
                                         {yearItems}
                                     </select>
@@ -151,7 +262,7 @@ class Form extends Component {
                             <div className="checkboxSection">
                                 <div className="checkContainer">
                                     <div className="errorAlert hidden" id="errorBox2">
-                                        <img src="img/alert_icon.png" width="35px" />
+                                        <img src="img/alert_icon.png" width="35px" alt="alert"/>
                                         <p>You cannot Participate in our contest without <span>reviewing our Consent to Rules and Regulations.</span></p>
                                     </div>
                                     <input type="checkbox" id="rules" name="rules" required />
@@ -164,13 +275,10 @@ class Form extends Component {
                                         <label htmlFor="sponsor">Consent to receiving communications regarding Future Promotions and Offers from BuyMore Dollar</label>
                                     </div>
                                 </div>
-
                             </div>
-
-
                         </div>
                         <div className="btnLegend">
-                            <input type="submit" defaultValue="SUBMIT"></input>
+                            <input type="submit" defaultValue="SUBMIT" onClick={(e) => this.handleSubmit(e)}></input>
                         </div>
                     </fieldset>
                 </form>
@@ -178,4 +286,4 @@ class Form extends Component {
     }
 }
 
-                                export default Form;
+export default Form;

@@ -6,7 +6,7 @@ import prizeDetail from '../images/prize_detail.png'
 class ScratchForm extends Component {
     render() {
         return(
-            <div className="game-container">
+            <div className="game-container form-container">
                 <Form/>
                 <div className="prize-container">
                 <img className="prize-details" src={prizeDetail} />

@@ -6,6 +6,12 @@
     background-size: cover;
     padding-left: 150px;
     padding-right: 150px;
+
+}
+
+.form-container {
+    display: flex;
+    justify-content: space-around;
 }
 
 .prize-details {
