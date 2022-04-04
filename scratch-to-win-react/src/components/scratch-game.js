@@ -8,15 +8,12 @@ class ScratchGame extends Component {
             <div className="game-container">
                 <div className="instruction-container">
                     <div className="instruction-main">
-                        <h3>Instruction on  How to play</h3>
-                        <p>(1)fill out user information form. <br/>
-                        (2)click on the link to play game.<br/>
-                        (3)scratch a card to see your results.<br/>
-                        (4)if you won prize you have to answer a<br/> skill question in order to get prize.<br/>
-                        (5)if you lost on the game,<br/> you can re-attempt after 72 hours <br/>after each attempt.<br/>
-                        
-                        
-                        
+                        <h3>Instructions on How to Play</h3>
+                        <p>(1) Hit the "Start" button at the bottom of the page. <br/>
+                        (2)Scratch the $ coins to reveal what's behind them. <br/>
+                        (3)Keep going until all the cards are scratched.<br/>
+                        (4)If you have achieved a prize-winning score,<br/>you will be presented with a skill question.<br/>
+                        (5)If you have not achieved a prize,<br/> you can try again in 72 hours.<br/>
                         </p>
                     </div>
                     <div className="game-board">

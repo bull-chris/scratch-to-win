@@ -45,22 +45,19 @@
 }
 
 .instruction-main h3{
-    position: absolute;
-    top: 150px;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
     color: black;
     text-align: center;
     font-size: 2rem;
+    padding-top: 35%;
+    padding-left: 20%;
+    padding-right: 20%;
 }
 
 .instruction-main p{
-    position: absolute;
-    top: 250px;
-    left: 25%;
     color: black;
     text-align: left;
+    padding-left: 20%;
+    padding-right: 20%;
 }
 
 .instruction-footer {

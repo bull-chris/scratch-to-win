@@ -47,26 +47,22 @@ class ScratchHome extends React.Component {
                         <div className="dotLine"></div>
                         <div className="card">
                             <img src={require("../images/step_1.png")} className="cardlogo"/>
-                            <p>Fill out user information form.
-                            </p>
+                            <p>Head to the Game Page to view the Contest Form. If you wish to play, please fill out the form with your information.</p>
                         </div>
 
                         <div className="card">
                             <img src={require("../images/step_2.png")} className="cardlogo"/>
-                            <p>Click on the "Play Game" Button.
-                            </p>
+                            <p>Submit the form, and then hit the "Start" button on the game page.</p>
                         </div>
 
                         <div className="card">
                             <img src={require("../images/step_3.png")} className="cardlogo"/>
-                            <p>scratch a card to see your results.
-                            </p>
+                            <p>Scratch $ coins to reveal what's behind them. Get lucky and you could win 10k+ Buymore Dollars!</p>
                         </div>
 
                         <div className="card">
                             <img src={require("../images/step_4.png")} className="cardlogo"/>
-                            <p>if you won prize you have to answer a skill question in order to get prize. if you lost on the game, you can re-attempt after 72 hours after each attempt.
-                            </p>
+                            <p>If you win a prize, you must complete a skill testing questionnaire to confirm your validity. If you lose, you may attempt again in 72 hours.</p>
                         </div>
                         <div className="infoBtn">
                             <Link to="/form"><button className="playBtn"> Play Now </button></Link>
