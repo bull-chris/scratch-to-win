@@ -46,25 +46,29 @@ class ScratchHome extends React.Component {
                         <div className="dotLine"></div>
                         <div className="card">
                             <img src={require("../images/step_1.png")} className="cardlogo"/>
-                            <p>Fill out user information form.
+                            <p>Lorem ipsum dolor sit amet, 
+                                consectetur adipiscing elit. Duis auctor varius hendrerit. Aliquam eleifend, urna at varius dignissim, 
                             </p>
                         </div>
 
                         <div className="card">
                             <img src={require("../images/step_2.png")} className="cardlogo"/>
-                            <p>Click on the "Play Game" Button.
+                            <p>Lorem ipsum dolor sit amet, 
+                                consectetur adipiscing elit. Duis auctor varius hendrerit. Aliquam eleifend, urna at varius dignissim, 
                             </p>
                         </div>
 
                         <div className="card">
                             <img src={require("../images/step_3.png")} className="cardlogo"/>
-                            <p>scratch a card to see your results.
+                            <p>Lorem ipsum dolor sit amet, 
+                                consectetur adipiscing elit. Duis auctor varius hendrerit. Aliquam eleifend, urna at varius dignissim, 
                             </p>
                         </div>
 
                         <div className="card">
                             <img src={require("../images/step_4.png")} className="cardlogo"/>
-                            <p>if you won prize you have to answer a skill question in order to get prize. if you lost on the game, you can re-attempt after 72 hours after each attempt.
+                            <p>Lorem ipsum dolor sit amet, 
+                                consectetur adipiscing elit. Duis auctor varius hendrerit. Aliquam eleifend, urna at varius dignissim, 
                             </p>
                         </div>
                         <div className="infoBtn">
