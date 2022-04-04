@@ -267,7 +267,7 @@ class Form extends Component {
                                         <p>You cannot Participate in our contest without <span>reviewing our Consent to Rules and Regulations.</span></p>
                                     </div>
                                     <input type="checkbox" id="rules" name="rules" required />
-                                    <label htmlFor="rules">Consent to <span><a href="/legal">Rules and Regulations</a></span></label>
+                                    <label htmlFor="rules">Consent to <span>Rules and Regulations</span></label>
                                 </div>
 
                                 <div className="checkContainer">
