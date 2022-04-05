@@ -224,18 +224,23 @@ class Form extends Component {
                         </legend>
 
                         <div className="formContent">
+                            <label htmlFor="fName">First Name:</label>
                             <input onChange={ (e) => this.showError( e.target ,0 )}   className="formInput" type="text" autoComplete="given-name" id="fName" name="fName" placeholder="First Name" pattern="^(?! )[A-Za-z\s]*$" required />
                             <div className="invalidInput hidden"><p>Please Enter Your First Name </p></div>
 
+                            <label htmlFor="lName">Last Name:</label>
                             <input onChange={(e) => this.showError( e.target , 1 )}  className="formInput" type="text" autoComplete="family-name" id="lName" name="lName" placeholder="Last Name" pattern="^(?! )[A-Za-z\s]*$" required />
                             <div className="invalidInput hidden"><p>Please Enter Your Last Name </p></div>
 
+                            <label htmlFor="address">Address:</label>
                             <input onChange={(e) => this.showError( e.target , 2 )} className="formInput" type="text" autoComplete="street-address" id="address" name="address" placeholder="Address" required />
                             <div className="invalidInput hidden"><p>Please Enter Your Full Address </p></div>
 
+                            <label htmlFor="phone">Phone Number:</label>
                             <input onChange={(e) => this.showError( e.target , 3 )} className="formInput" type="tel" autoComplete="tel" id="phone" name="phone" placeholder="Phone Number" maxLength="10" minLength="10" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required/>
                             <div className="invalidInput hidden"><p>Please Enter Your Phone Number </p></div>
 
+                            <label htmlFor="email">Email:</label>
                             <input onChange={(e) => this.showError( e.target , 4 )} className="formInput" type="email" autoComplete="email" id="email" name="email" placeholder="Email" required/>
                             <div className="invalidInput hidden" ><p>Please Enter Your Email </p></div>
 

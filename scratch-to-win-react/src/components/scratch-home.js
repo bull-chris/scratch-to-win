@@ -2,6 +2,8 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 
 import Slider from 'react-slick';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 class ScratchHome extends React.Component {
 
@@ -17,7 +19,7 @@ class ScratchHome extends React.Component {
             dots: true,
             autoplay: true,
             infinite: true,
-            autoplaySpeed: 5000,
+            autoplaySpeed: 3000,
             slidesToShow: 1,
             variableWidth: true,
             lazyLoad: 'ondemand',
@@ -77,9 +79,9 @@ class ScratchHome extends React.Component {
                     <section className="sponsorSection">
                         <Slider {...this.sponsorSlickSettings}>
                             <img className="sponsorImg" src={require("../images/Fresh Kicks-o-matic Dispenso Booths.png")}/>
-                            {/* <img className="sponsorImg" src={require("../images/Glorbotronic Burgers.png")}/>
-                            <img src={require("../images/Raw-Cabbage-on-a-stick Hut.png")}/>
-                            <img src={require("../images/taco_superstore.png")}/> */}
+                            <img className="sponsorImg" src={require("../images/Glorbotronic Burgers.png")}/>
+                            <img className="sponsorImg" src={require("../images/Raw-Cabbage-on-a-stick Hut.png")}/>
+                            <img className="sponsorImg" src={require("../images/taco_superstore.png")}/>
                         </Slider>
                     </section>
                 </section>

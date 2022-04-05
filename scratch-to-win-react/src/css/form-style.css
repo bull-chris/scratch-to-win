@@ -116,7 +116,6 @@ label {
 }
 
 input[type='submit']{
-    width: 80%;
     background-color: #E99F22;
     border: transparent;
     font-size: 20pt;

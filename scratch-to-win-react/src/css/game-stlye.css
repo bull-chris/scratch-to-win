@@ -1,11 +1,9 @@
 .game-container {
-    height: 100vh;
     background-image: url(../images/form_background.png);
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding-left: 150px;
-    padding-right: 150px;
+    padding: 50px 150px;
 
 }
 

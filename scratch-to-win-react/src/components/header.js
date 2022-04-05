@@ -17,10 +17,7 @@ class Header extends React.Component {
                         <Link to="/form" className="navlink"> GAME </Link>
                     </li>
                     <li>                
-                        <Link to="/game" className="navlink"> FAQ </Link>
-                    </li>
-                    <li>                
-                        <Link to="/contact" className="navlink"> CONTACT </Link>
+                        <Link to="/legal" className="navlink"> LEGAL </Link>
                     </li>
                 </ul>
             </nav>

@@ -157,6 +157,7 @@ legend {
 
 .card {
     text-align: center;
+    height: 300px;
 }
 
 .card img {
@@ -190,12 +191,15 @@ legend {
     overflow: hidden;
     margin-left: 90px;
     display: flex;
+    max-height: 350px;
 }
 
 .sponsorSection .slick-next {
-    position: relative;
+    position: absolute;
     margin: 140px 10px;
-    right: 0;
+    right: -25px;
+    left: 1095px;
+    top: 0;
     -webkit-transform: translate(0, 0);
     -ms-transform: translate(0, 0);
     transform: translate(0, 0)
@@ -209,9 +213,9 @@ legend {
 }
 
 .sponsorImg {
-    height: 350px;
-    width: 350px;
+    max-height: 350px;
     margin: 0 10px;
+    padding: 0 10px;
 }
 
 .verticalTab {
