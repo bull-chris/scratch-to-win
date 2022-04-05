@@ -7,7 +7,7 @@ class Footer extends React.Component {
             <footer>
                 <section className="footerContainer">
                     {/* footer logo */}
-                    <Link to="/scratch-to-win/" className="logo">
+                    <Link to="/" className="logo">
                         <img  alt="Logo" width="150px" src={require("../images/buyMoreDollars_black_logo.png")}/>
                     </Link>
                     {/* footer copyright */}

@@ -16,7 +16,7 @@ function App() {
       <div className='app'>
       <Header />
       <Routes>
-        <Route path="/scratch-to-win/" element={<ScratchHome />} />
+        <Route path="/" element={<ScratchHome />} />
         <Route path="/form" element={<ScratchForm />} />
         <Route path="/game" element={<ScratchGame />} />
         <Route path="/legal" element={<ScratchLegal />} /> 
