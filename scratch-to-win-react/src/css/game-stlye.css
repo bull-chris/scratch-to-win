@@ -46,16 +46,23 @@
     color: black;
     text-align: center;
     font-size: 2rem;
-    padding-top: 35%;
+    padding-top: 30%;
     padding-left: 20%;
     padding-right: 20%;
+}
+
+.instruction-main-paragraph{
+    height: 200px;
+    overflow: scroll;
 }
 
 .instruction-main p{
     color: black;
     text-align: left;
-    padding-left: 20%;
-    padding-right: 20%;
+    padding-left: 22%;
+    padding-right: 22%;
+    padding-top: 1rem;
+    line-height: 1.5rem;
 }
 
 .instruction-footer {
