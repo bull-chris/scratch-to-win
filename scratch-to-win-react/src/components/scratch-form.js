@@ -10,7 +10,7 @@ class ScratchForm extends Component {
             <div className="game-container form-container">
                 <Form/>
                 <div className="prize-container">
-                <img className="prize-details" src={prizeDetail} />
+                <img className="prize-details" alt="Prize details" src={prizeDetail} />
                 </div>
             </div>
         )

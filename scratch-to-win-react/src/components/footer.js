@@ -15,10 +15,10 @@ class Footer extends React.Component {
                 </section>
                 <section className="socialIcon">
                     <p>Stay Connected : </p>
-                    <a href=""><img width="35px" src={require("../images/FB_icon.png")} alt=""/></a>
-                    <a href=""><img width="35px" src={require("../images/twittter_icon.png")} alt=""/></a>
-                    <a href=""><img width="35px" src={require("../images/instagram_icon.png")} alt=""/></a>
-                    <a href=""><img width="35px" src={require("../images/youtube_icon.png")} alt=""/></a>
+                    <img width="35px" src={require("../images/FB_icon.png")} alt=""/>
+                    <img width="35px" src={require("../images/twittter_icon.png")} alt=""/>
+                    <img width="35px" src={require("../images/instagram_icon.png")} alt=""/>
+                    <img width="35px" src={require("../images/youtube_icon.png")} alt=""/>
                 </section>
             </footer>
         )

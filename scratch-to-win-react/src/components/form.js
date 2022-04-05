@@ -21,7 +21,6 @@ class Form extends Component {
         this.isLeapYear = this.isLeapYear.bind(this);
         this.change_month = this.change_month.bind(this);
         this.checkDropDown = this.checkDropDown.bind(this);
-        let success = false;
     }
 
     isLeapYear(year) {

@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './css/style.css';
 import {
   BrowserRouter,
