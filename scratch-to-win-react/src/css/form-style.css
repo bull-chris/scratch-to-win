@@ -153,6 +153,7 @@ input[type='submit']{
 .errorAlert#errorBox2{
     bottom: 60px;
     right: -345px;
+    color: #000;
 }
 
 

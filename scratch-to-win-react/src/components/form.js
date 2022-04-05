@@ -21,8 +21,10 @@ class Form extends Component {
         this.isLeapYear = this.isLeapYear.bind(this);
         this.change_month = this.change_month.bind(this);
         this.checkDropDown = this.checkDropDown.bind(this);
+
     }
 
+    //check for leap year
     isLeapYear(year) {
         year = parseInt(year);
         if (year % 4 !== 0) {
@@ -36,6 +38,7 @@ class Form extends Component {
         }
     }
     
+    //change the year
     change_year(select) {
         if( this.isLeapYear(select.target.value)) {
             let newDays = this.state.Days;
@@ -52,6 +55,7 @@ class Form extends Component {
         }
     }
     
+    //change the month
     change_month(select) {
         let month = select.target.selectedIndex - 1
         let dayOptions = document.getElementById('day');
@@ -66,6 +70,7 @@ class Form extends Component {
         }
     }
     
+    //remove options from elements
     removeOptions(selectElement){
         let remove = selectElement.options.length - 1;
         for(let i = remove; i >= 1; i--) {
@@ -73,6 +78,7 @@ class Form extends Component {
         }
     }
 
+    //show error messages for the form
     showError(ele, index){
         let msg ,msg2;
         let err = document.getElementsByClassName('invalidInput')
@@ -135,6 +141,7 @@ class Form extends Component {
         
     }
 
+    //check for errors with the drop down selection
     checkDropDown(e){
         let dropDown = document.getElementsByClassName('dropdownBday');
         let err = document.getElementsByClassName('invalidInput')
@@ -150,6 +157,7 @@ class Form extends Component {
         }
     }
 
+    //check for errors with the checkbox selections
     checkBoxValidate(e){
         let checkBox = document.getElementById('rules');
         let errorBoxes = document.getElementsByClassName('errorAlert');
@@ -161,6 +169,7 @@ class Form extends Component {
         }
     }
 
+    //check the user's age for errors
     checkAge(select){
         let err = document.getElementsByClassName('invalidInput')
         let age = this.state.currentYear - select.target.value;
@@ -174,6 +183,7 @@ class Form extends Component {
         console.log(age)
     }
 
+    //handle the submission of the form
     handleSubmit(e){
         let validationElements = document.getElementsByClassName('formInput');
 
@@ -218,10 +228,12 @@ class Form extends Component {
                 <form name="myForm" id="form" >
                     <fieldset className="formWrapper">
 
+                        {/* form logo */}
                         <legend >
                             <img src={darkLogo} alt='logo'/>
                         </legend>
 
+                        {/* form content */}
                         <div className="formContent">
                             <label htmlFor="fName">First Name:</label>
                             <input onChange={ (e) => this.showError( e.target ,0 )}   className="formInput" type="text" autoComplete="given-name" id="fName" name="fName" placeholder="First Name" pattern="^(?! )[A-Za-z\s]*$" required />
@@ -273,7 +285,7 @@ class Form extends Component {
                             <div className="checkboxSection">
                                 <div className="checkContainer">
                                     <div className="errorAlert hidden" id="errorBox2">
-                                        <img src="img/alert_icon.png" width="35px" alt="alert"/>
+                                        <img src={require("../images/alert_icon.png")} width="35px" alt="alert"/>
                                         <p>You cannot Participate in our contest without <span>reviewing our Consent to Rules and Regulations.</span></p>
                                     </div>
                                     <input type="checkbox" id="rules" name="rules" required />
@@ -288,6 +300,7 @@ class Form extends Component {
                                 </div>
                             </div>
                         </div>
+                        {/* form submit button */}
                         <div className="btnLegend">
                             <Link to="/game"><input type="submit" defaultValue="SUBMIT" onClick={(e) => this.handleSubmit(e)}></input></Link>
                         </div>

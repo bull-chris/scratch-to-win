@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import Coin from "./coin";
 
 class GameBoard extends Component {
+    //render a coin to the game board
     renderCoin(i) {
         return(
             <Coin/>
@@ -9,6 +10,7 @@ class GameBoard extends Component {
     }
 
     render() {
+        //render the game board as 3x3 grid
         return(
             <>
                 <div className="board-row">

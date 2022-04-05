@@ -6,13 +6,16 @@ class Footer extends React.Component {
         return (
             <footer>
                 <section className="footerContainer">
-                    <Link to="/" className="logo">
+                    {/* footer logo */}
+                    <Link to="/scratch-to-win/" className="logo">
                         <img  alt="Logo" width="150px" src={require("../images/buyMoreDollars_black_logo.png")}/>
                     </Link>
+                    {/* footer copyright */}
                     <p>Copyright 2022 All Rights Reserved by BuyMore Dollars</p>
-                    <p>Terms & Conditions</p>
-                    <p>Privacy Policy</p>
+                    {/* footer legal */}
+                    <Link to="/legal"><p>Legal</p></Link>
                 </section>
+                {/* social media icons */}
                 <section className="socialIcon">
                     <p>Stay Connected : </p>
                     <img width="35px" src={require("../images/FB_icon.png")} alt=""/>

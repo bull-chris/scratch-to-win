@@ -23,20 +23,6 @@ body {
     justify-content: space-between;
     padding: 15px;
 }
-/*
-.navBar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px;
-    padding-left: 100px;
-    position: absolute;
-    top: 0;
-    z-index: 10000;
-    width: 100%;
-    font-weight: 400;
-    background-color: black;
-}*/
 
 .logo:hover{
     cursor: pointer;
@@ -124,9 +110,8 @@ body {
     font-size: 3rem;
 }
 
-
-
 /* Main Content Style */
+
 .info {
     display: flex;
     flex-direction: column;
@@ -197,6 +182,7 @@ legend {
 }
 
 .sponsorSection .slick-next {
+    display: none;
     position: absolute;
     margin: 140px 10px;
     right: -25px;
@@ -208,6 +194,7 @@ legend {
 }
 
 .sponsorSection .slick-prev:before, .sponsorSection .slick-next:before {
+    display: none;
     font-size: 60px;
     color: transparent;
     background-image: url("../images/next_arrow_icon.png");
@@ -231,7 +218,7 @@ legend {
 
     position: absolute;
     left: 0;
-    bottom: -72px;
+    top: 350px;
     z-index: 10000;
 
     transform: rotate(270deg);
@@ -307,6 +294,7 @@ footer{
 }
 
 /** responsive styling settings */
+/* mobile styling */
 @media screen and (max-width: 640px) {
     
     /* mobile header styles */
@@ -366,11 +354,6 @@ footer{
         width: auto;
     }
 
-     /* form page styling */
-    .form-container {
-        display: block;
-    }
-
     /* mobile footer styles */
 
     .footerContainer {
@@ -386,7 +369,7 @@ footer{
 /* tablet styles */
 @media screen and (min-width: 640px) and (max-width: 1024px) {
     
-    /* mobile header styles */
+    /* tablet header styles */
     .navBar {
         display: block;
         text-align: center;
@@ -407,7 +390,7 @@ footer{
         justify-content: space-evenly;
     }
 
-    /* home page styles */
+    /* tablet home page styles */
     .hero-content {
         width: 100%;
         top: 0;
@@ -443,7 +426,7 @@ footer{
         width: auto;
     }
 
-    /* mobile footer styles */
+    /* tablet footer styles */
 
     .footerContainer {
         display: block;

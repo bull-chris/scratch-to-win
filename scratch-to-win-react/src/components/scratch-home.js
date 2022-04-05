@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 class ScratchHome extends React.Component {
 
+    //hero images slider settings
     heroSlickSettings = {
             dots: true,
             arrows: false,
@@ -15,6 +16,7 @@ class ScratchHome extends React.Component {
             autoplaySpeed: 5000,
     }
 
+    //sponsor images slider settings
     sponsorSlickSettings = {
             dots: true,
             autoplay: true,
@@ -26,8 +28,10 @@ class ScratchHome extends React.Component {
     }
 
     render() {
+        //scratch home page
         return (
             <main>
+                {/* hero images slider */}
                 <Slider className="heroImg wrapper" {...this.heroSlickSettings}>
                     <div className="heroContainer"> 
                         <img className="hero-bg" width="2000px" alt='Hero slider 1' src={require("../images/bg.png")}/>
@@ -47,14 +51,10 @@ class ScratchHome extends React.Component {
                     </div>
                     <div className="heroContainer"> 
                         <img className="hero-bg" width="2000px" alt='Hero slider 3' src={require("../images/slider-03.png")}/>
-                        <div className="hero-content">
-                            <img width="300px" alt='Buymore Dollars Logo' src={require("../images/logo_main.png")}/>
-                            <img width="600px" alt='Scratch to win Logo' src={require("../images/scratch_logo.png")}/>
-                            <Link to="/form"><button className="playBtn">Play Now</button></Link>
-                        </div>
                     </div>
                 </Slider>
 
+                {/* instructions section */}
                 <section className="info">
                     <fieldset className="cardContainer">
                         <legend>
@@ -86,6 +86,7 @@ class ScratchHome extends React.Component {
                     </fieldset>
                 </section>
 
+                {/* sponsor section */}
                 <section className="sponsor">
                     <div className="verticalTab">
                         <h3>OUR SPONSOR</h3>

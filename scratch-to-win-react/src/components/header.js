@@ -6,12 +6,14 @@ class Header extends React.Component {
     render() {
         return (
             <header className="navBar">
-            <Link to="/"><img  alt="Logo" width="175px" src={require("../images/logo_main.png")}/></Link>
+            {/* header logo */}
+            <Link to="/scratch-to-win/"><img  alt="Logo" width="175px" src={require("../images/logo_main.png")}/></Link>
                 
+            {/* header nav bar */}
             <nav className="navLinkContainer">
                 <ul>
                     <li>                
-                        <Link to="/" className="navlink"> HOME </Link>
+                        <Link to="/scratch-to-win/" className="navlink"> HOME </Link>
                     </li>
                     <li>                
                         <Link to="/form" className="navlink"> GAME </Link>
