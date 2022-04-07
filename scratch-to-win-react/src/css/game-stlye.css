@@ -110,6 +110,11 @@
 .board-row {
     display: flex;
     justify-content: space-between;
+    margin-top: 20px;
+}
+
+.test-bg {
+    background-color: #E99F22;
 }
 
 /** responsive styling settings */
@@ -177,10 +182,6 @@
     .game-board {
         width: 85%;
         margin: 0 auto;
-    }
-
-    .board-row img {
-        width: 75px;
     }
 }
 

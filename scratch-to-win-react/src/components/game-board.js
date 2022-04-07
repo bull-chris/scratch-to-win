@@ -1,36 +1,31 @@
-import React, {Component} from "react";
+import React from "react";
 import Coin from "./coin";
+import uniqid from "uniqid";
 
-class GameBoard extends Component {
+
+function GameBoard (props) {
     //render a coin to the game board
-    renderCoin(i) {
-        return(
-            <Coin/>
-        )
-    }
 
-    render() {
-        //render the game board as 3x3 grid
-        return(
-            <>
-                <div className="board-row">
-                    {this.renderCoin(0)}
-                    {this.renderCoin(1)}
-                    {this.renderCoin(2)}
-                </div>
-                <div className="board-row">
-                    {this.renderCoin(3)}
-                    {this.renderCoin(4)}
-                    {this.renderCoin(5)}
-                </div>
-                <div className="board-row">
-                    {this.renderCoin(6)}
-                    {this.renderCoin(7)}
-                    {this.renderCoin(8)}
-                </div>
-            </>
-        )
+    const renderCoin = () => {
+        if (props.startIndex) {
+            return props.startIndex.map((id) => <Coin key={uniqid()}/>)
+        }
     }
+    
+    //render the game board as 3x3 grid
+    return(
+        <>
+            <div className="board-row">
+                {renderCoin()}
+            </div>
+            <div className="board-row">
+                {renderCoin()}
+            </div>
+            <div className="board-row">
+                {renderCoin()}
+            </div>
+        </>
+    )
 }
 
 export default GameBoard;
