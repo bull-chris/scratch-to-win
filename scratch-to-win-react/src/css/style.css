@@ -293,6 +293,10 @@ footer{
     margin-right: 15px;
 }
 
+#legal_styles{
+    color: black;
+}
+
 /** responsive styling settings */
 /* mobile styling */
 @media screen and (max-width: 640px) {
