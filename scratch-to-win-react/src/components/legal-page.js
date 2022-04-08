@@ -20,6 +20,11 @@ class ScratchLegal extends Component {
                     <h3>What we do with your Data</h3>
                     <p>Your personal data such as first name, last name, email, postal address, phone number and birthdate will be used for promotional use, enhancing user experience and for promotion for our upcoming contest and offers.</p>
 
+                    <h3>Third-Party Advertising and Promotions</h3>
+                    <p>Buy more Dollars may provide third-party content on the Sites or links to third-party web pages, content, applications, products, and services, including advertisements and promotions. We do not control any Third-Party Content, including endorsement by Buy more Dollars of any site, and can make no guarantee as to if it is genuine or not. by visiting or participating in such a third-party contest You acknowledge and agree that Buy more Dollars is not responsible for any kind of financial or data loss. by participating  You agree to use such Third-Party Content at your own risk. when the user participates in such third-party events or co
+                        ntests they should know that we don't have any control over the involvement of third-party brands. 
+                        You should review the applicable terms and policies of that particular brand.</p>
+
                     <h2>Conditions for Age Restriction</h2>
                     <ul>
                         <li>In order to participate in the Scratch to Win contest, users must be 16 years of age or older.</li>
