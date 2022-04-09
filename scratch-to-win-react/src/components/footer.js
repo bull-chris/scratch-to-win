@@ -13,7 +13,7 @@ class Footer extends React.Component {
                     {/* footer copyright */}
                     <p>Copyright 2022 All Rights Reserved by BuyMore Dollars</p>
                     {/* footer legal */}
-                    <Link to="/legal"><p>Legal</p></Link>
+                    <Link to="/legal"><p id='legal_styles'>Legal Page</p></Link>
                 </section>
                 {/* social media icons */}
                 <section className="socialIcon">
