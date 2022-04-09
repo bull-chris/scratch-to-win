@@ -10,6 +10,7 @@ import ScratchHome from './components/scratch-home.js';
 import ScratchForm from './components/scratch-form';
 import ScratchGame from './components/scratch-game';
 import ScratchLegal from'./components/legal-page';
+
 function App() {
   return (
     <BrowserRouter>
@@ -17,8 +18,8 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<ScratchHome />} />
-        {/* <Route path="/form" element={<ScratchForm />} /> */}
-        <Route path="/form" element={<ScratchGame />} />
+        <Route path="/form" element={<ScratchForm />} />
+        <Route path="/game" element={<ScratchGame />} />
         <Route path="/legal" element={<ScratchLegal />} /> 
       </Routes>
       

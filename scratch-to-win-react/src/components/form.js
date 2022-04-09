@@ -1,7 +1,10 @@
-import React, { Component } from "react";
+import React, { Component, useState, useEffect } from "react";
 import { Link }  from 'react-router-dom';
 import '../css/form-style.css'
 import darkLogo from '../images/scratch_dark_logo.png'
+
+//array to hold all the emails in local storage
+let theEmails = [];
 
 class Form extends Component {
 
@@ -15,6 +18,7 @@ class Form extends Component {
             Months :["","January","February","March","April","May","June","July","August","September","October","November","December"],
             date : curentDate,
             currentYear : curentDate.getFullYear(),
+            emails: []
         }
         this.myRef = React.createRef();
         this.change_year = this.change_year.bind(this);
@@ -22,6 +26,8 @@ class Form extends Component {
         this.change_month = this.change_month.bind(this);
         this.checkDropDown = this.checkDropDown.bind(this);
 
+        //get the emails from local storage
+        theEmails = JSON.parse(localStorage.getItem("buyMoreDollarsEmails"));
     }
 
     //check for leap year
@@ -124,7 +130,16 @@ class Form extends Component {
                     err[index].classList.remove('hidden');
                     ele.classList.add('error');
                     break;
-                }
+                }  
+                //else {
+                //     for (let i = 0; i < emailInfo.length; i++) {
+                //         if (ele.value == emailInfo[i].email) {
+                //             alert("You may only play once every 72 hours")
+                //             break;
+                //         }
+                //     }
+                //     break;
+                // }
                 break;
                 default: {
                     if (ele.validity.valueMissing){
@@ -187,6 +202,26 @@ class Form extends Component {
     handleSubmit(e){
         let validationElements = document.getElementsByClassName('formInput');
 
+        let addEmail = true;
+        let enteredEmail = validationElements[4].value;
+        theEmails = JSON.parse(localStorage.getItem("buyMoreDollarsEmails"));
+
+        if (theEmails.length > 0) {
+            for(let i = 0; i < theEmails.length; i++) {
+                if (enteredEmail == theEmails[i]) {
+                    e.preventDefault();
+                    alert("You may only participate in the Scratch to Win contest once every 72 hours.");
+                    addEmail = false;
+                    break;
+                }
+            }
+        }
+
+        if (addEmail) {
+            theEmails.push(enteredEmail);
+        }
+            
+
         this.checkDropDown(e);
         this.checkBoxValidate(e);
         for(let i = 0; i < validationElements.length; i++){
@@ -196,9 +231,10 @@ class Form extends Component {
                 this.showError(validationElements[i], i);
             }  
         }
-            
 
         
+        localStorage.setItem("buyMoreDollarsEmails", JSON.stringify(theEmails));
+            
     }
 
     render() {

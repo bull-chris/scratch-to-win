@@ -8,7 +8,6 @@ function ScratchGame (props) {
     const [disable, setDisable] = useState(false);
 
     const handleStart = () => {
-        console.log('hi')
         setGameCard([0,1,2]);
         setDisable(true)
     }
@@ -23,8 +22,8 @@ function ScratchGame (props) {
                     <div className="instruction-main-paragraph">
                         <p>(1) Hit the "Start" button at the bottom of the page. <br/>
                         (2) Scratch the $ coins to reveal what's behind them. <br/>
-                        (3) Keep going until all the cards are scratched.<br/>
-                        (4) If you have achieved a prize-winning score,<br/>you will be presented with a skill question.<br/>
+                        (3) Keep going until all you have recieved a prize.<br/>
+                        (4) If you have achieved a winning prize,<br/>you will be presented with a skill question.<br/>
                         (5) If you have not achieved a prize,<br/> you can try again in 72 hours.<br/>
                         </p>
                     </div>
@@ -37,11 +36,6 @@ function ScratchGame (props) {
             {/* game controls */}
             <div className="instruction-footer">
                 <Link to="/legal"><button>Terms and Conditions</button></Link>
-                <div className="game-counter">
-                    <p>Game Time : 00:00</p>
-                    <p>Current Points: 00:00</p>
-                </div>
-                <button>Exit</button>
                 <button disabled={disable} onClick={handleStart}>Start</button>
             </div>
         </div>
